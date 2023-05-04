@@ -15,7 +15,9 @@ Song::Song(std::string artist, std::string title, std::string lyrics)
 			this->lyrics[j] += lyrics[i];
 		else
 			this->lyrics.push_back(""), j++;
+		
 	}
+	//std::cout << "End Lyrirc: " << title << '\n';
 }
 
 std::string Song::getArtist()
@@ -32,3 +34,14 @@ std::vector<std::string> Song::getLyrics()
 {
 	return lyrics;
 }
+
+//Song::~Song()
+//{
+//	if (!lyrics.empty())
+//	{
+//		for (int i = 0; i < lyrics.size(); i++)
+//			lyrics[i].erase();
+//		title.erase();
+//		artist.erase();
+//	}
+//}

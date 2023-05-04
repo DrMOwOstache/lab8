@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <iostream>
 
 class Song
 {
@@ -17,4 +18,6 @@ public:
 	std::string getArtist();
 	std::string getTitle();
 	std::vector<std::string> getLyrics();
+
+	//~Song();
 };

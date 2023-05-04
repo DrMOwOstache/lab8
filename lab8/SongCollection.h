@@ -11,10 +11,13 @@ class SongCollection
 private:
 	std::vector<Song> Songs;
 
-	std::string copyFromPos(std::string other, int pos, int endSlash = 0);
+	std::string copyFromPos(std::ifstream& in, std::string other, int pos);
 
 public:
 	SongCollection(std::ifstream& in);
 	std::set<std::string> UniArtits();
-	std::unordered_map< std::string, std::string> GetArtist();
+	std::vector< std::pair<std::string, int> > GetArtist();
+
+	std::vector < std::tuple<std::string, std::string, std::vector<std::string> > > GetEverything();
+	//~SongCollection();
 };
